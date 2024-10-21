@@ -1,5 +1,7 @@
 # Led-control-using-Arduino
+NAME  : Baskar U
 
+REG NO: 212223220013
 ## AIM
 To design and implement a system for LED control using an Arduino microcontroller and a push button.
 
@@ -58,9 +60,37 @@ Emergency Signaling System </br>
 Weighing Machines </br>
 
 ## CIRCUIT DIAGRAM
+![image](https://github.com/user-attachments/assets/d9cdd8d4-28df-4f38-aaa2-3db619894459)
 
 ## PROGRAM
+```
+const int buttonPin = 2;     
+const int ledPin =5;     
+int buttonState = 0; 
+void setup() {
+  pinMode(ledPin,OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
 
+void loop()
+{
+  buttonState = digitalRead(buttonPin);
+  if (buttonState == HIGH) 
+{
+  digitalWrite(ledPin, HIGH);
+} 
+  else 
+{
+  digitalWrite(ledPin, LOW);
+}
+}
+```
 ## OUTPUT
+### LED OFF
+![image](https://github.com/user-attachments/assets/33ef9a0e-2fba-4174-b6e0-7eb1730522fb)
+
+### LED ON
+![image](https://github.com/user-attachments/assets/83b80b78-1f3a-4e1c-a258-99ff23577e78)
 
 ## RESULT
+A system for LED control using an Arduino microcontroller and a push button is implemented.
